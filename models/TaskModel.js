@@ -3,7 +3,7 @@ class TaskModel {
   async getAll(db) {
     try {
       const [rows] = await db.execute(
-        "SELECT id, task, created_at, updated_at FROM task"
+        "SELECT id, task, created_at, updated_at FROM tasks"
       );
       return rows;
     } catch (error) {
